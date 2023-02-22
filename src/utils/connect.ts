@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import config from 'config';
+mongoose.set('strictQuery', true);
 
 async function connect() {
   const dbUri = config.get<string>('dbUri');
